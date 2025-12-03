@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Emociones</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+    }
+
+    /* Pantalla inicial */
+    #login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #d79bda, #d1bde4);
+        color: white;
+    }
+
+    #login input {
+        padding: 10px;
+        margin: 8px;
+        width: 80%;
+        max-width: 300px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #login button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        background: #4479ac;
+        color: rgb(248, 207, 250);
+        cursor: pointer;
+    }
+
+    /* Página principal */
+    #main {
+        display: none;
+        text-align: center;
+        background: url("Imagen de WhatsApp 2025-12-02 a las 13.36.04_7b66b8bc.jpg") center/cover no-repeat fixed;
+        height: 100vh;
+        padding-top: 40px;
+    }
+
+    .btn-menu {
+        display: inline-block;
+        margin: 15px;
+        padding: 15px 25px;
+        border-radius: 10px;
+        background: rgba(141, 73, 95, 0.8);
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .btn-menu:hover {
+        transform: scale(1.1);
+    }
+
+    section {
+        display: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .regresar {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        background: #93c8f7;
+        color: rgb(127, 53, 161);
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    /* Enfermedades lista */
+    .enfermedad {
+        margin: 8px;
+        padding: 12px;
+        background: #c49ddd;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .enfermedad:hover {
+        background: #95b7da;
+    }
+
+    /* Imágenes */
+    .imagenes-container img {
+        width: 90%;
+        max-width: 360px;
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+
+    .frase {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+    <h2>Ingresa tus datos</h2>
+    <input id="usuario" type="text" placeholder="Usuario" />
+    <input id="correo" type="email" placeholder="Correo electrónico" />
+    <button onclick="entrar()">Entrar</button>
+</div>
+
+<!-- MENÚ PRINCIPAL -->
+<div id="main">
+   
+
+    <h2>La salud mental se refiere al bienestar emocional, psicologico y social de una persona, esto abarca en el como pensamos y actuamos en la vida diaria.
+    </h2>
+
+    <h3>Mantener una buena salud mental es fundamental para el bienestar general y la calidad de vida .</h3>
+    <h4>Si quieres profundizar y aprender mas sobre este tema dale click al boton de tu agrado</h4>
+
+    <div class="btn-menu" onclick="mostrar('videos')">Videos</div>
+    <div class="btn-menu" onclick="mostrar('podcast')">Podcast</div>
+    <div class="btn-menu" onclick="mostrar('enfermedades')">Enfermedades</div>
+    <div class="btn-menu" onclick="mostrar('frases')">Frases</div>
+
+</div>
+
+<!-- VIDEOS -->
+<section id="videos">
+    <div class="frase">"Las emociones son la brújula del alma"</div>
+
+    <h2>¿QUE ES LA SALUD MENTAL?</h2>
+    <video src="video3.mp4" controls></video>
+
+    <h2>"Hablar sana"</h2>
+    <video src="video1.mp4" controls></video>
+
+    <h2>¿POR QUE ES IMPORTANTE MI SALUD MENTAL?</h2>
+    <video src="video2.mp4" controls></video>
+
+    
+
+    <button class="regresar" onclick="regresar()">Regresar</button>
+</section>
+
+<!-- PODCAST -->
+<section id="podcast">
+    <div class="frase">"Sentir también es avanzar"</div>
+    <h2>Podcast "salud mental"</h2>
+    <p>• Podcast 1 entrevista con la alumna fernanda del del plantel cecytem villa victoria del grupo 302</p>
+    <audio controls><source src="podcast1.unknown" type="audio/mpeg" ></audio>
+    <p>• Podcast 2  entrevista con la alumna monserrat  del plantel cecytem villa victoria del grupo 501 </p>
+     <audio controls><source src="podcast 2.unknown" type="audio/mpeg"></audio>
+    <p>• Podcast 3 entrevista con el alumno emanuel del plantel cecytem villa victoria del grupo 101</p>
+     <audio controls><source src="podcast 3.unknown" type="audio/mpeg"></audio>
+    <p>• Podcast 4 entevesta con la alumna jumena del plantel cecytem villa victoria del grupo 503</p>
+     <audio controls><source src="podcas 4.unknown" type="audio/mpeg"></audio>
+    
+    <button class="regresar" onclick="regresar()">Regresar</button>
+</section>
+
+<!-- FRASES -->
+<section id="frases">
+      <div class="frase">"Respira, siente, y continúa"</div>
+    <h2> tal vez las frases solo son eso frases pero te ayudan a reflexion un poco para mejorar cada dia como persona y animarte apesar de todas tus dificultades.</h2>
+    <p>• "Creanme que no existe el sufrimiento eterno, la pena infinita, el recuerdo imborrable.... todo se olvida, incluso cuando lo veas todo perdido".</p>
+    <p>• "La vida a veces duele, a veces cansa, a veces hiere. No es perfecta , no es coherente, no es eterna: pero, a pesar de todo, la vida es bella".</p>
+    <p>• "Las personas que se permiten sentir son mas fuertes que las que se hacen las duras o se dicen asi mismas que pueden con todo".</p>
+    <p>• "el pensamiento no es la realidad; sin embargo, es atraves del pensamiento como se crean nuestras realidades".</p>
+<img src="96f7503bf1734f6c4712a58e540ec936.jpg" alt="">
+
+    <button class="regresar" onclick="regresar()">Regresar</button>
+</section>
+
+<!-- ENFERMEDADES -->
+<section id="enfermedades">
+    <div class="frase">"Tu salud emocional importa"</div>
+    <h2>30 Enfermedades</h2>
+    <div id="listaEnf"></div>
+    <button class="regresar" onclick="regresar()">Regresar</button>
+</section>
+
+
+<section id="detalle">
+    <div class="frase">"Comprender es el primer paso para sanar"</div>
+    <h2 id="tituloEnf"></h2>
+
+    <div class="imagenes-container" id="imagenes"></div>
+
+    <button class="regresar" onclick="regresarLista()">Regresar</button>
+</section>
+
+<script>
+
+function entrar() {
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('main').style.display = 'block';
+}
+
+function mostrar(seccion) {
+    document.getElementById('main').style.display = 'none';
+    document.getElementById(seccion).style.display = 'block';
+}
+
+function regresar() {
+    document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+    document.getElementById('main').style.display = 'block';
+}
+
+function regresarLista() {
+    document.getElementById('detalle').style.display = 'none';
+    document.getElementById('enfermedades').style.display = 'block';
+}
+
+/* ------------------------------
+   LISTA DE IMÁGENES POR ENFERMEDAD
+   ———————————————— */
+
+const imagenesPorEnfermedad = {
+    "Esquizofrenia": {
+        banner: "banerezquisofrenia.jpg",
+        cartel: "cartelesquizofrenia.jpg",
+        poster: "posteresquizofrenia.jpg"
+    },
+    "Bipolaridad": {
+        banner: "  ",
+        cartel: " Imagen de WhatsApp 2025-11-26 a las 17.26.11_f6afa183.jpg  ",
+        poster: " Imagen de WhatsApp 2025-11-26 a las 17.27.40_68e59165.jpg "
+    },
+    "Estrés": {
+        banner: "banerestres.jpg",
+        cartel: "cartelestres.jpg",
+        poster: " Imagen de WhatsApp 2025-11-26 a las 16.55.55_1542a8d1.jpg "
+    },
+    "depresion": {
+        banner: "banerdeprecion.jpg",
+        cartel: "carteldepresion.jpg",
+        poster: "depresion poster.jpg"
+    },
+    
+    "Transtorno de ansiedad": {
+        banner: " ansiedadbaner.jpg ",
+        cartel: " ansiedadcartel.jpg ",
+        poster: " ansiedadposter.jpg "
+    },
+    "Bulimia": {
+        banner: " bulimiabaner.jpg  ",
+        cartel: " bulimiacartel.jpg  ",
+        poster: " bulimiaposter.jpg  "
+    },
+    "Anorexia": {
+        banner: "baneranorexia.jpg",
+        cartel: "cartelanorexia.jpg",
+        poster: " posteranorexia.jpg "
+    },
+    "Transtorno de panico": {
+        banner: "  Imagen de WhatsApp 2025-11-26 a las 17.16.26_e930c7eb.jpg ",
+        cartel: "Imagen de WhatsApp 2025-11-26 a las 17.08.28_0b5d0e6d.jpg  ",
+        poster: "  Imagen de WhatsApp 2025-11-26 a las 17.08.04_0f3df83c.jpg  "
+    },
+    "Transtorno de sueño": {
+        banner: " sueñobaner.jpg  ",
+        cartel: " cartelsueño.jpg  ",
+        poster: " sueñoposter.jpg   "
+    },
+    "Tept": {
+        banner: " teptbaner.jpg ",
+        cartel: "carteltept.jpg",
+        poster: "  teptposter.jpg  "
+    },
+    "Anciedad social": {
+        banner: "baneranciedadsocial.jpg",
+        cartel: "cartelansiedadsocial.jpg",
+        poster: " posteransiedadsocial.jpg "
+    },
+     "Agorafobia": {
+        banner: " agorafobiabaner.jpg  ",
+        cartel: "agorafobiacartel.jpg    ",
+        poster: "  agorafobiaposter.jpg  "
+    },
+     "cleptomania": {
+        banner: " Imagen de WhatsApp 2025-11-27 a las 22.35.20_1d39b5ff.jpg ",
+        cartel: "  Imagen de WhatsApp 2025-11-27 a las 22.37.06_4c3ba875.jpg ",
+        poster: "Imagen de WhatsApp 2025-11-27 a las 22.35.20_9ca5ebb3.jpg   "
+    },
+    "Obsesivo compulsivo": {
+        banner: "banerobsesivocompulsivo.jpg",
+        cartel: "cartelobsesivocompulsivo.jpg",
+        poster: "  posterobsesivocompulsivo.jpg "
+    },
+    "Transtorno deliriente": {
+        banner: "banerdelirente.jpg",
+        cartel: " transtornoderirantecartel.jpg  ",
+        poster: " delirante.jpg  "
+    },
+    "piromania": {
+        banner: "piromaniabaner.jpg   ",
+        cartel: " piromaniacartel.jpg  ",
+        poster: "  piromaniaposer.jpg "
+    },
+    "Tricotilomania": {
+        banner: "tricotilomania b.jpg ",
+        cartel: "tricotilomania c.jpg   ",
+        poster: "tricotilomania p.jpg  "
+    },
+    "Alzhaimer": {
+        banner: "baneralzheimer.jpg",
+        cartel: "cartelalzheimer.jpg",
+        poster: " posteralzheimer.jpg  "
+    },
+    "Autista": {
+        banner: " Imagen de WhatsApp 2025-11-26 a las 16.53.47_c1981523.jpg ",
+        cartel: "   ",
+        poster: "Imagen de WhatsApp 2025-11-26 a las 16.53.47_c41e5c54.jpg  "
+    },
+    "Transtorno de la personalidad": {
+        banner: " tpersonalidadbaner.jpg ",
+        cartel: " tpersonalidadcartel.jpg ",
+        poster: " tpersonalidadposter.jpg "
+    },
+    "Transtorno de aprendizaje": {
+        banner: "  Imagen de WhatsApp 2025-11-26 a las 17.26.49_b7a600dd.jpg",
+        cartel: " Imagen de WhatsApp 2025-11-26 a las 17.08.04_9df6e7b6.jpg ",
+        poster: " Imagen de WhatsApp 2025-11-26 a las 17.08.03_050757f6.jpg "
+    },
+    "Sindrome de taurete": {
+        banner: " Imagen de WhatsApp 2025-11-26 a las 17.22.29_0155c655.jpg ",
+        cartel: "  Imagen de WhatsApp 2025-11-26 a las 17.08.28_17d674ef.jpg",
+        poster: " Imagen de WhatsApp 2025-11-26 a las 17.08.04_42bc7e98.jpg "
+    },
+    "TDAH": {
+        banner: "Imagen de WhatsApp 2025-11-27 a las 22.35.01_ca683843.jpg  ",
+        cartel: " Imagen de WhatsApp 2025-11-27 a las 22.35.02_c8754be0.jpg ",
+        poster: " Imagen de WhatsApp 2025-11-27 a las 22.35.01_222b70bc.jpg "
+    },
+    "hipocondria": {
+        banner: "  ",
+        cartel: "  ",
+        poster: "  "
+    },
+    "Transtorno por uso de sustansias": {
+        banner: "  ",
+        cartel: " tusodesustancias.jpg  ",
+        poster: "tusodesustanciasposter.jpg   "
+    },
+    "Transtorno de la conducta alimentaria nocturna": {
+        banner: "  Imagen de WhatsApp 2025-11-26 a las 17.29.41_a96c20f2.jpg ",
+        cartel: "Imagen de WhatsApp 2025-11-26 a las 17.29.40_ae4a69b4.jpg",
+        poster: " Imagen de WhatsApp 2025-11-26 a las 17.29.41_9fd02f25.jpg  "
+    },
+    "Transtorno de la identidad de genero": {
+        banner: "  Imagen de WhatsApp 2025-11-26 a las 17.42.17_cac7410b.jpg ",
+        cartel: "  Imagen de WhatsApp 2025-11-26 a las 17.42.18_4dedfd46.jpg ",
+        poster: " Imagen de WhatsApp 2025-11-26 a las 17.42.18_b961a55c.jpg  "
+    },
+    " Transtorno de somatizacion": {
+        banner: "  ",
+        cartel: "  ",
+        poster: "  "
+    },
+    "Transtorno de disociacion": {
+        banner: " Imagen de WhatsApp 2025-11-26 a las 21.04.26_4d401053.jpg ",
+        cartel: "Imagen de WhatsApp 2025-11-26 a las 17.41.40_d2d52dfe.jpg  ",
+        poster: " Imagen de WhatsApp 2025-11-26 a las 17.50.59_3989a1b5.jpg "
+    },
+
+    "Transtorno de ansiedad generalizada": {
+        banner: " Imagen de WhatsApp 2025-11-26 a las 17.48.26_3aeb3690.jpg ",
+        cartel: " Imagen de WhatsApp 2025-11-26 a las 17.48.26_633d0ad0.jpg ",
+        poster: "  Imagen de WhatsApp 2025-11-26 a las 17.48.25_3997a016.jpg"
+    },
+
+    "Dependencia emocional": {
+        banner: " dependenciaebaner.jpg ",
+        cartel: " dependenciaemcartel.jpg ",
+        poster: " posterdependencia.jpg "
+    },
+
+
+
+
+
+};
+
+
+
+let lista = "Esquizofrenia,Bipolaridad,Estrés,depresion,Transtorno de ansiedad,Bulimia,Anorexia,Transtorno de panico,Transtorno de sueño,Tept,Anciedad social,Agorafobia,cleptomania,Obsesivo compulsivo,Transtorno deliriente,piromania,Tricotilomania,Alzhaimer,Autista,Transtorno de la personalidad,Transtorno de aprendizaje,Sindrome de taurete,TDAH,hipocondria,Transtorno por uso de sustansias,  Transtorno de la conducta alimentaria nocturna, Transtorno de la identidad de genero, Transtorno de somatizacion, Transtorno de disociacion , Transtorno de ansiedad generalizada, Dependencia emocional".split(',');
+
+let contenedor = document.getElementById('listaEnf');
+
+lista.forEach(e => {
+    let div = document.createElement('div');
+    div.className = 'enfermedad';
+    div.textContent = e;
+    div.onclick = () => mostrarDetalle(e);
+    contenedor.appendChild(div);
+});
+
+function mostrarDetalle(nombre) {
+    document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+
+    document.getElementById('tituloEnf').textContent = nombre;
+
+    let zona = document.getElementById('imagenes');
+    zona.innerHTML = "";
+
+    if (imagenesPorEnfermedad[nombre]) {
+        let imgs = imagenesPorEnfermedad[nombre];
+
+        zona.innerHTML = `
+            <h3>Banner</h3>
+            <img src="${imgs.banner}" alt="Banner de ${nombre}">
+
+            <h3>Cartel</h3>
+            <img src="${imgs.cartel}" alt="Cartel de ${nombre}">
+
+            <h3>Poster</h3>
+            <img src="${imgs.poster}" alt="Póster de ${nombre}">
+        `;
+    } else {
+        zona.innerHTML = "<p>No hay imágenes registradas para esta enfermedad.</p>";
+    }
+
+    document.getElementById('detalle').style.display = 'block';
+}
+
+</script>
+
+</body>
+</html>
